@@ -45,7 +45,7 @@ Employees can hit the internet and the DMZ web server on ports 80 and 443. They 
 
 <img width="981" height="484" alt="Guest VLAN firewall rules" src="https://github.com/user-attachments/assets/a2725d33-3978-47d8-ab7d-08cd85deb48a" />
 
-Internet only. Can't reach Management, Corporate, or the DMZ. DNS allowed so they can actually resolve names. This is the rule set you want for visitor WiFi or anything you don't trust.
+Internet only. Can't reach Management, Corporate, or the DMZ. DNS allowed so they can resolve names. This is the rule set for visitor WiFi or anything you don't trust.
 
 ### DMZ (VLAN 40)
 
