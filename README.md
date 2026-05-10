@@ -27,7 +27,7 @@ The endpoints:
 
 ## Firewall rules
 
-This is where the actual segmentation happens. Each VLAN has its own ruleset and the rules follow least privilege. If a VLAN doesn't need to talk to something, it can't.
+This is where the segmentation happens. Each VLAN has its own ruleset and the rules follow least privilege. If a VLAN doesn't need to talk to something, it can't.
 
 ### Management (VLAN 10)
 
