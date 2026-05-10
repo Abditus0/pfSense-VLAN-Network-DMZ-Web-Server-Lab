@@ -51,7 +51,7 @@ Internet only. Can't reach Management, Corporate, or the DMZ. DNS allowed so the
 
 <img width="972" height="392" alt="DMZ VLAN firewall rules" src="https://github.com/user-attachments/assets/35d525df-6480-4afb-97c1-3d90e3fdaf34" />
 
-The DMZ can reach the internet for updates but it cannot start connections back into any internal network. This is the part that matters. If someone pops the web server, the firewall stops them from pivoting. They're stuck on a Linux box with no path forward.
+The DMZ can reach the internet for updates but it cannot start connections back into any internal network and that's important. If someone pops the web server, the firewall stops them from pivoting. They're stuck on a Linux box with no path forward.
 
 ## Hardening the DMZ web server
 
