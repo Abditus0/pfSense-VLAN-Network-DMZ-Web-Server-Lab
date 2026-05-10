@@ -114,7 +114,7 @@ From **DMZ-WebServer**: can pull updates from the internet. Cannot initiate any 
 
 **Ubuntu installer would not finish on host-only.** First time around I tried to install Ubuntu Server with the network adapter already on the DMZ host-only network. The installer needs internet to pull packages and it hung. Fix was to install with the adapter on NAT first, finish setup, then shut down and switch the adapter to the DMZ host-only network. After the switch, Nginx and UFW were already configured, the box just came up on the new VLAN.
 
-**pfSense lost configuration after a "power off".** I shut down the pfSense VM the wrong way once and the next boot came up with no firewall rules and no interface assignments. Lesson learned. pfSense has to be shut down through console option 6 (Halt system). Anything else risks corrupting the config. After that I never powered it off any other way.
+**pfSense lost configuration after a "power off".** I shut down the pfSense VM the wrong way once and the next boot came up with no firewall rules and no interface assignments. Lesson learned. pfSense has to be shut down through console option 6 (Halt system). Anything else risks corrupting the config.
 
 **Got locked out of SSH after hardening.** Classic. Switched the SSH port to 2222, disabled password auth, restarted SSH, then realized I hadn't actually set up my SSH key first. I had to use the VirtualBox console to log in directly and fix it. Now the rule is: get key auth working first, then disable passwords. Not at the same time.
 
