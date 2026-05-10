@@ -110,7 +110,7 @@ From **DMZ-WebServer**: can pull updates from the internet. Cannot initiate any 
 
 ## Problems I had to solve
 
-**Firewall rule order tripped me up early.** pfSense processes rules top to bottom and stops at the first match. I had a Guest VLAN where pings to internal networks were still going through, and I couldn't figure out why. Turned out my "block internal" rules were below an "allow everything" rule that was matching first. Moved the block rules to the top, problem gone. Rule order is everything in pfSense.
+**Firewall rule order tripped me up early.** pfSense processes rules top to bottom and stops at the first match. I had a Guest VLAN where pings to internal networks were still going through, and I couldn't figure out why. Turned out my "block internal" rules were below an "allow everything" rule that was matching first. Moved the block rules to the top, problem gone.
 
 **Ubuntu installer would not finish on host-only.** First time around I tried to install Ubuntu Server with the network adapter already on the DMZ host-only network. The installer needs internet to pull packages and it just hung. Fix was to install with the adapter on NAT first, finish setup, then shut down and switch the adapter to the DMZ host-only network. After the switch, Nginx and UFW were already configured, the box just came up on the new VLAN.
 
