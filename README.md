@@ -1,6 +1,6 @@
 # Enterprise Network Segmentation Lab
 
-Four VLANs running off a pfSense router. Management for IT, Corporate for employees, Guest for visitors, and a DMZ for a public web server. Each one isolated, each one with its own firewall rules, each one tested from every other VLAN to prove the isolation actually holds.
+Four VLANs running off a pfSense router. Management for IT, Corporate for employees, Guest for visitors, and a DMZ for a public web server. Each one isolated, each one with its own firewall rules, each one tested from every other VLAN to prove the isolation works.
 
 The whole thing runs in VirtualBox. pfSense handles routing, DHCP, DNS, and firewalling between VLANs. Each VLAN sits on its own host-only adapter so the segmentation is real, not just logical. The DMZ web server is a hardened Ubuntu box running Nginx with UFW layered on top of pfSense, so there are two firewalls between the internet and anything that matters.
 
