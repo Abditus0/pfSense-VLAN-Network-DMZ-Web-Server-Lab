@@ -122,7 +122,7 @@ From **DMZ-WebServer**: can pull updates from the internet. Cannot initiate any 
 
 The biggest one is that segmentation is only as good as your testing. You can write the cleanest rules in the world but until you actually try to ping every gateway from every VLAN, you don't know if the rules do what you think they do. I caught two misconfigurations during testing that the rules looked fine for on paper.
 
-Defense in depth is real and not just a buzzword. pfSense alone would have been fine for most things, but having UFW on the DMZ box means even if someone managed to get a rule wrong upstream, the host itself still drops the traffic. Two layers, two chances to catch a mistake.
+Defense in depth is important. pfSense alone would have been fine for most things, but having UFW on the DMZ box means even if someone managed to get a rule wrong upstream, the host itself still drops the traffic. Two layers, two chances to catch a mistake.
 
 Other things that came out of this:
 
@@ -133,6 +133,4 @@ Other things that came out of this:
 
 ## Why I built it
 
-I wanted to build the kind of network you'd actually find in a small office, not a flat home network with everything on the same subnet. Real environments have segmentation. Real environments have a guest network that can't see the file server, a corporate network that can't touch the firewall, and a DMZ that can't pivot back inside if it gets popped.
-
-Reading about segmentation isn't the same as configuring it, breaking it, and fixing it. Now I've designed VLANs, written the firewall rules, hardened the host on top, tested every isolation boundary, and dealt with the gotchas that show up when you actually do this work. That's the difference between knowing what a DMZ is and being able to build one.
+I wanted to build a network you'd find in a small office, not a flat home network with everything on the same subnet. Real environments have segmentation. Real environments have a guest network that can't see the file server, a corporate network that can't touch the firewall, and a DMZ that can't pivot back inside if it gets popped.
