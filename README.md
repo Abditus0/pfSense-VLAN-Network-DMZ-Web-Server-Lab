@@ -95,7 +95,7 @@ From **Management-PC**: web access to DMZ works, SSH on 2222 works, can ping eve
 
 From **Corporate-PC**: web access to DMZ works on 80 and 443. SSH to DMZ times out (UFW drops it before pfSense even sees it). Pings to Management gateway dropped at the firewall. Internet works.
 
-From **Guest-PC**: cannot reach Management, Corporate, or DMZ. At all. Pings die. Web requests time out. Only the internet works. Exactly what a guest network should do.
+From **Guest-PC**: cannot reach Management, Corporate, or DMZ. Pings die. Web requests time out. Only the internet works. Exactly what a guest network should do.
 
 From **DMZ-WebServer**: can pull updates from the internet. Cannot initiate any connection back into Management, Corporate, or Guest. A compromised DMZ is a dead end for the attacker.
 
