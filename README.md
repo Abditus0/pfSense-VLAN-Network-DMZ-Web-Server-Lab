@@ -89,7 +89,7 @@ SSH only from Management. HTTP and HTTPS open to anything that can reach the box
 
 ## Testing the isolation
 
-Rules on paper mean nothing. I tested every VLAN against every other VLAN to prove the segmentation actually held.
+Rules on paper mean nothing. I tested every VLAN against every other VLAN to prove the segmentation worked.
 
 From **Management-PC**: web access to DMZ works, SSH on 2222 works, can ping every gateway. Full access as expected.
 
